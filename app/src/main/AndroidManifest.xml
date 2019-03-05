@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eshika.todopro">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fingerprint"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/done"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Dashboard_activity"
+            android:label="DashBoard" />
+        <activity
+            android:name=".forgotpass_activity"
+            android:label="Forgot Password" />
+        <activity
+            android:name=".signupActivity"
+            android:label="Register"  android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".New_noteActivity"
+            android:label="New Note"
+            android:parentActivityName=".Main2Activity" />
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ProcessTextActivity"
+            android:label="Note">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FingerprintAuth"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
